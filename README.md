@@ -1,4 +1,4 @@
-# Collections Es6
+# Collections-Es6
 
 This module provides functionality of Collections Framework of ES6 such as 
 Map, Set, WeakMap, WeakSet in native ES5 for older browsers and JavaScript engines.
