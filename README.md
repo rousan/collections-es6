@@ -116,7 +116,7 @@ console.log(ES6.isWeakSet(ws)); //true
     
 ## Testing
     
-    `npm test`
+   `npm test`
 
 ## Dependency
 
