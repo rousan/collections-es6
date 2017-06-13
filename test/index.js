@@ -1,4 +1,6 @@
 
+"use strict";
+
 var map = new Map([[1, 2], ["Hi", "Hello World"]]);
 
 console.log(map.has(1)); //true
@@ -43,4 +45,16 @@ console.log(ES6.isMap(map)); //true
 console.log(ES6.isSet(set)); //true
 console.log(ES6.isWeakMap(wm)); //true
 console.log(ES6.isWeakSet(ws)); //true
+
+ES6.forOf(set, function (v) {
+    console.log(v);
+});
+//NaN
+//0
+//Hi
+//Hello World
+//Infinity
+
+console.log(ES6.spreadOperator([]).spread(set).array()); //[ NaN, 0, 'Hi', 'Hello World', Infinity ]
+
 

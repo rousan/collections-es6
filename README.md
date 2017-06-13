@@ -7,6 +7,7 @@ To get full implementations of ES6 in ES5, install [es6-harmony](https://github.
 ## Polyfills
 
 * `Map`
+
     * `Map.prototype.size`
     * `Map.prototype.set()`
     * `Map.prototype.get()`
@@ -19,6 +20,7 @@ To get full implementations of ES6 in ES5, install [es6-harmony](https://github.
     * `Map.prototype.values()`
     * `Map.prototype[@@iterator]()`
     * `Map.prototype[@@toStringTag]()`
+    
 * `Set`
     * `Set.prototype.size`
     * `Set.prototype.add()`
@@ -31,17 +33,22 @@ To get full implementations of ES6 in ES5, install [es6-harmony](https://github.
     * `Set.prototype.values()`
     * `Set.prototype[@@iterator]()`
     * `Set.prototype[@@toStringTag]()`
+    
 * `WeakMap`
+
     * `WeakMap.prototype.delete()`
     * `WeakMap.prototype.get()`
     * `WeakMap.prototype.has()`
     * `WeakMap.prototype.set()`
     * `WeakMap.prototype[@@toStringTag]()`
+    
 * `WeakSet`
+
     * `WeakSet.prototype.add()`
     * `WeakSet.prototype.delete()`
     * `WeakSet.prototype.has()`
     * `WeakSet.prototype[@@toStringTag]()`
+    
 
 ## Usage
 
@@ -49,6 +56,7 @@ It creates an object `ES6` on the global object(window in browser or global in N
 some utility methods.
 
 ```javascript
+"use strict";
 
 require("symbol-es6");
 require("collections-es6");
