@@ -1,6 +1,6 @@
 {
   "name": "collections-es6",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides polyfills for Map, Set, WeakMap and WeakSet of ES6 in native ES5 code",
   "main": "collections-es6.js",
   "directories": {
@@ -37,7 +37,7 @@
     "url": "https://github.com/ariyankhan/collections-es6/issues"
   },
   "homepage": "https://github.com/ariyankhan/collections-es6#readme",
-  "devDependencies": {
+  "dependencies": {
     "symbol-es6": "^0.1.0"
   }
 }
