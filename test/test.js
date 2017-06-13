@@ -1,5 +1,8 @@
 
 
+require("symbol-es6");
+require("collections-es6");
+
 var map = new Map([[1, 2], ["Hi", "Hello World"]]);
 
 console.log(map.has(1)); //true

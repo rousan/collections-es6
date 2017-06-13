@@ -4,7 +4,7 @@
  * Map, Set, WeakMap, WeakSet in native ES5 for older browsers and JavaScript
  * engines.
  *
- * It requires Symbol-ES6(>=v0.1.0) module, just install it from npm:
+ * It requires Symbol-ES6(>=v0.1.0) module, just install it from the npm:
  * npm install --save symbol-es6
  * Visit for details: https://github.com/ariyankhan/symbol-es6
  *
@@ -818,7 +818,6 @@
     if (isES6Running())
         return ES6;
     else {
-
         defineProperties(ES6, {
             isMap: {
                 value: isMap,
