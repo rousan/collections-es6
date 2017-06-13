@@ -1,5 +1,5 @@
 /*!
- * Collections-ES6 v0.1.0
+ * Collections-ES6 v0.1.1
  * This module provides functionality of Collections Framework of ES6 such as
  * Map, Set, WeakMap, WeakSet in native ES5 for older browsers and JavaScript
  * engines.
@@ -68,6 +68,109 @@
 
     var isObject = function (value) {
         return value !== null && (typeof value === "object" || typeof value === "function");
+    };
+
+    // Provides simple inheritance functionality
+    var simpleInheritance = function (child, parent) {
+        if (typeof child !== "function" || typeof parent !== "function")
+            throw new TypeError("Child and Parent must be function type");
+
+        child.prototype = Object.create(parent.prototype);
+        child.prototype.constructor = child;
+    };
+
+    // Make Iterator like iterable
+    defineProperty(Iterator.prototype, Symbol.iterator.toString(), {
+        value: function () {return this;},
+        writable: true,
+        configurable: true
+    });
+
+    simpleInheritance(MapIterator, Iterator);
+
+    simpleInheritance(SetIterator, Iterator);
+
+    defineProperty(MapIterator.prototype, Symbol.toStringTag.toString(), {
+        value: "Map Iterator",
+        configurable: true
+    });
+
+    defineProperty(SetIterator.prototype, Symbol.toStringTag.toString(), {
+        value: "Set Iterator",
+        configurable: true
+    });
+
+    MapIterator.prototype.next = function next() {
+        if (!(this instanceof MapIterator))
+            throw new TypeError("Method Map Iterator.prototype.next called on incompatible receiver " + String(this));
+        var self = this,
+            nextValue;
+        if (self._done) {
+            return {
+                done: true,
+                value: undefined
+            };
+        }
+        if (self._currentEntry === null)
+            self._currentEntry = self._map._head;
+        else
+            self._currentEntry = self._currentEntry.next;
+
+        if (self._currentEntry === null) {
+            self._done = true;
+            return {
+                done: true,
+                value: undefined
+            };
+        }
+        // _flag = 1 for [key, value]
+        // _flag = 2 for [value]
+        // _flag = 3 for [key]
+        if (self._flag === 1)
+            nextValue = [self._currentEntry.key, self._currentEntry.value];
+        else if (self._flag === 2)
+            nextValue = self._currentEntry.value;
+        else if (self._flag === 3)
+            nextValue = self._currentEntry.key;
+        return {
+            done: false,
+            value: nextValue
+        };
+    };
+
+    SetIterator.prototype.next = function next() {
+        if (!(this instanceof SetIterator))
+            throw new TypeError("Method Set Iterator.prototype.next called on incompatible receiver " + String(this));
+        var self = this,
+            nextValue;
+        if (self._done) {
+            return {
+                done: true,
+                value: undefined
+            };
+        }
+        if (self._currentEntry === null)
+            self._currentEntry = self._set._head;
+        else
+            self._currentEntry = self._currentEntry.next;
+
+        if (self._currentEntry === null) {
+            self._done = true;
+            return {
+                done: true,
+                value: undefined
+            };
+        }
+        // _flag = 1 for [value, value]
+        // _flag = 2 for [value]
+        if (self._flag === 1)
+            nextValue = [self._currentEntry.value, self._currentEntry.value];
+        else if (self._flag === 2)
+            nextValue = self._currentEntry.value;
+        return {
+            done: false,
+            value: nextValue
+        };
     };
 
     // Returns hash for primitive typed key like this:
