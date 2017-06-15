@@ -1,6 +1,6 @@
 {
   "name": "collections-es6",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Provides polyfills for Map, Set, WeakMap and WeakSet of ES6 in native ES5 code",
   "main": "collections-es6.js",
   "directories": {
