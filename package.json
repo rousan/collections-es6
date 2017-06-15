@@ -38,6 +38,6 @@
   },
   "homepage": "https://github.com/ariyankhan/collections-es6#readme",
   "dependencies": {
-    "symbol-es6": "^0.1.0"
+    "symbol-es6": "^0.1.1"
   }
 }
