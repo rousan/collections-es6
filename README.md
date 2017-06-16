@@ -132,7 +132,7 @@ in browser or install it from npm for NodeJS.
 
 ## License
 
-MIT License
+MIT License  
 
 Copyright (c) 2017 Ariyan Khan
 
