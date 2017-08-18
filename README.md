@@ -124,7 +124,7 @@ It requires the [symbol-es6](https://github.com/ariyankhan/symbol-es6) module, s
 just include it before [collections-es6](https://github.com/ariyankhan/https://github.com/ariyankhan/collections-es6) module
 in browser or install it from npm for NodeJS.
 
-  `npm install --save symbol-es6`
+  `npm install --save symbol-es6` 
 
 ## Contributors
 
