@@ -1,17 +1,15 @@
 {
   "name": "collections-es6",
-  "version": "0.1.4",
-  "description": "Provides polyfills for Map, Set, WeakMap and WeakSet of ES6 in native ES5 code",
+  "version": "0.1.5",
+  "description": "ES6 Map, Set, WeakMap and WeakSet polyfill in pure ES5",
   "main": "collections-es6.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
+    "build": "uglifyjs --source-map --compress --output dist/collections-es6.min.js -- collections-es6.js",
     "test": "node ./test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ariyankhan/collections-es6.git"
+    "url": "git+https://github.com/rousan/collections-es6.git"
   },
   "keywords": [
     "es6",
@@ -31,13 +29,16 @@
     "es6-weakmap",
     "es6-weakset"
   ],
-  "author": "Ariyan Khan",
+  "author": "Rousan Ali <rousanali786@gmail.com> (https://rousan.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ariyankhan/collections-es6/issues"
+    "url": "https://github.com/rousan/collections-es6/issues"
   },
-  "homepage": "https://github.com/ariyankhan/collections-es6#readme",
+  "homepage": "https://github.com/rousan/collections-es6#readme",
   "dependencies": {
-    "symbol-es6": "^0.1.1"
+    "symbol-es6": "^0.1.2"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.3.9"
   }
 }

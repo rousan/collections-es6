@@ -1,17 +1,13 @@
 /*!
- * Collections-ES6 v0.1.4
- * This module provides functionality of Collections Framework of ES6 such as
+ * Collections-ES6 v0.1.5
+ * Provides functionality of Collections Framework of ES6 such as
  * Map, Set, WeakMap, WeakSet in native ES5 for older browsers and JavaScript
  * engines.
  *
- * It requires Symbol-ES6(>=v0.1.0) module, just install it from the npm:
- * npm install --save symbol-es6
- * Visit for details: https://github.com/ariyankhan/symbol-es6
+ * @license Copyright (c) 2017-2018 Rousan Ali, MIT License
  *
- * @license Copyright (c) 2017 Ariyan Khan, MIT License
- *
- * Codebase: https://github.com/ariyankhan/collections-es6
- * Date: Jun 13, 2017
+ * Codebase: https://github.com/rousan/collections-es6
+ * Date: 29th Jan, 2018
  */
 
 (function (global, factory) {

@@ -1,65 +1,47 @@
+[![NPM version](https://img.shields.io/npm/v/collections-es6.svg)](https://www.npmjs.com/package/collections-es6)
+[![NPM total downloads](https://img.shields.io/npm/dt/collections-es6.svg)](https://www.npmjs.com/package/collections-es6)
+[![License](https://img.shields.io/github/license/rousan/collections-es6.svg)](https://github.com/rousan/collections-es6/blob/master/LICENSE)
+
 # Collections-ES6
 
-This module provides functionality of Collections Framework of ES6 such as 
-Map, Set, WeakMap, WeakSet in native ES5 for older browsers and JavaScript engines.
-To get full implementations of ES6 in ES5, install [es6-harmony](https://github.com/ariyankhan/es6-harmony) module. 
+Provides support for `ES6` `Map`, `Set`, `WeakMap` and `WeakSet` in `ES5` for older JS environments i.e. older browsers or `NodeJS`.
 
-## Polyfills
+> ES6 Map, Set, WeakMap and WeakSet polyfill in pure ES5.
 
-* `Map`
+## Install
 
-    * `Map.prototype.size`
-    * `Map.prototype.set()`
-    * `Map.prototype.get()`
-    * `Map.prototype.has()`
-    * `Map.prototype.clear()`
-    * `Map.prototype.delete()`
-    * `Map.prototype.entries()`
-    * `Map.prototype.forEach()`
-    * `Map.prototype.keys()`
-    * `Map.prototype.values()`
-    * `Map.prototype[@@iterator]()`
-    * `Map.prototype[@@toStringTag]()`
-    
-* `Set`
-    * `Set.prototype.size`
-    * `Set.prototype.add()`
-    * `Set.prototype.clear()`
-    * `Set.prototype.delete()`
-    * `Set.prototype.entries()`
-    * `Set.prototype.forEach()`
-    * `Set.prototype.has()`
-    * `Set.prototype.keys()`
-    * `Set.prototype.values()`
-    * `Set.prototype[@@iterator]()`
-    * `Set.prototype[@@toStringTag]()`
-    
-* `WeakMap`
+It depends on [symbol-es6](https://github.com/rousan/symbol-es6) module, so you need to include both.
 
-    * `WeakMap.prototype.delete()`
-    * `WeakMap.prototype.get()`
-    * `WeakMap.prototype.has()`
-    * `WeakMap.prototype.set()`
-    * `WeakMap.prototype[@@toStringTag]()`
-    
-* `WeakSet`
+### NPM
 
-    * `WeakSet.prototype.add()`
-    * `WeakSet.prototype.delete()`
-    * `WeakSet.prototype.has()`
-    * `WeakSet.prototype[@@toStringTag]()`
-    
+Install it from `npm` and `require` it before any other modules:
 
-## Usage
+```bash
+$ npm install --save collections-es6
+```
 
-It creates an object `ES6` on the global object(window in browser or global in NodeJS). `ES6` object provides
-some utility methods.
+```javascript
+require("symbol-es6");
+require("collections-es6");
+```
+
+### CDN
+
+If you prefer CDN, then just insert it into your HTML page on the top of other scripts:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/symbol-es6/dist/symbol-es6.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/collections-es6/dist/collections-es6.min.js"></script>
+```
+
+## Examples
 
 ```javascript
 "use strict";
 
-require("symbol-es6");
-require("collections-es6");
+var ES6 = require("symbol-es6");
+ES6 = require("collections-es6");
+
 
 var map = new Map([[1, 2], ["Hi", "Hello World"]]);
 
@@ -107,50 +89,67 @@ console.log(ES6.isWeakMap(wm)); //true
 console.log(ES6.isWeakSet(ws)); //true
 ```
 
-## Install
+## Polyfills
 
-* For browser, just include this script on top of the other scripts
-* In NodeJS environment install it from NPM,
+* `Map`
 
-    `npm install --save collections-es6`
+    * `Map.prototype.size`
+    * `Map.prototype.set()`
+    * `Map.prototype.get()`
+    * `Map.prototype.has()`
+    * `Map.prototype.clear()`
+    * `Map.prototype.delete()`
+    * `Map.prototype.entries()`
+    * `Map.prototype.forEach()`
+    * `Map.prototype.keys()`
+    * `Map.prototype.values()`
+    * `Map.prototype[@@iterator]()`
+    * `Map.prototype[@@toStringTag]()`
     
-## Testing
+* `Set`
+    * `Set.prototype.size`
+    * `Set.prototype.add()`
+    * `Set.prototype.clear()`
+    * `Set.prototype.delete()`
+    * `Set.prototype.entries()`
+    * `Set.prototype.forEach()`
+    * `Set.prototype.has()`
+    * `Set.prototype.keys()`
+    * `Set.prototype.values()`
+    * `Set.prototype[@@iterator]()`
+    * `Set.prototype[@@toStringTag]()`
     
-   `npm test`
+* `WeakMap`
 
-## Dependency
+    * `WeakMap.prototype.delete()`
+    * `WeakMap.prototype.get()`
+    * `WeakMap.prototype.has()`
+    * `WeakMap.prototype.set()`
+    * `WeakMap.prototype[@@toStringTag]()`
+    
+* `WeakSet`
 
-It requires the [symbol-es6](https://github.com/ariyankhan/symbol-es6) module, so
-just include it before [collections-es6](https://github.com/ariyankhan/https://github.com/ariyankhan/collections-es6) module
-in browser or install it from npm for NodeJS.
+    * `WeakSet.prototype.add()`
+    * `WeakSet.prototype.delete()`
+    * `WeakSet.prototype.has()`
+    * `WeakSet.prototype[@@toStringTag]()`
 
-  `npm install --save symbol-es6` 
+## Contributing
 
-## Contributors
+Your PRs and stars are always welcome.
 
-* [Rousan Ali](https://github.com/ariyankhan)
+Please, try to follow:
 
-## License
+* Clone the repository.
+* Checkout `develop` branch.
+* Install dependencies.
+* Add your new features or fixes.
+* Build the project.
 
-MIT License  
-
-Copyright (c) 2017 Rousan Ali
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
-SOFTWARE.
-
+```sh
+$ git clone https://github.com/rousan/collections-es6.git
+$ cd collections-es6
+$ git checkout develop
+$ npm i
+$ npm run build
+```

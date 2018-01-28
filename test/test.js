@@ -1,8 +1,8 @@
 
 "use strict";
 
-require("symbol-es6");
-require("../collections-es6");
+var ES6 = require("symbol-es6");
+ES6 = require("../collections-es6");
 
 var map = new Map([[1, 2], ["Hi", "Hello World"]]);
 
