@@ -133,23 +133,3 @@ console.log(ES6.isWeakSet(ws)); //true
     * `WeakSet.prototype.delete()`
     * `WeakSet.prototype.has()`
     * `WeakSet.prototype[@@toStringTag]()`
-
-## Contributing
-
-Your PRs and stars are always welcome.
-
-Please, try to follow:
-
-* Clone the repository.
-* Checkout `develop` branch.
-* Install dependencies.
-* Add your new features or fixes.
-* Build the project.
-
-```sh
-$ git clone https://github.com/rousan/collections-es6.git
-$ cd collections-es6
-$ git checkout develop
-$ npm i
-$ npm run build
-```
