@@ -2,3 +2,8 @@ theme: jekyll-theme-cayman
 title: "Collections-ES6"
 description: "ES6 equivalent implimentation in ES5 for old JavaScript engines"
 show_downloads: "true"
+google_analytics: "UA-114357378-1"
+theme_color: "#061166"
+github:
+  zip_url: "https://github.com/rousan/collection-es6/zipball/master"
+  tar_url: "https://github.com/rousan/collection-es6/tarball/master"
